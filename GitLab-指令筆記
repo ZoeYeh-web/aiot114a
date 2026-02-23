@@ -1,0 +1,91 @@
+# 📘 GitLab 完整指令說明筆記（含詳細解釋）
+
+> 本筆記整理 Git + GitLab 常用指令與用途說明  
+> 適合個人開發 / 團隊協作 / CI/CD 基礎使用
+
+---
+
+# 🔹 一、Git 基本觀念
+
+Git 工作流程分為三個區域：
+
+1. Working Directory（工作區）
+2. Staging Area（暫存區）
+3. Repository（版本庫）
+
+流程：
+
+修改檔案 → git add → git commit → git push
+
+---
+
+# 🔹 二、首次設定（只需設定一次）
+
+## 設定使用者名稱
+
+```bash
+git config --global user.name "你的名字"
+
+## 查看設定
+git config --list
+
+## 從 GitLab 下載專案
+git clone 專案網址
+cd project
+
+## 初始化 Git
+git init
+## 加入檔案到暫存區
+git add .
+git add 檔名(限單一檔案)
+
+## 建立/變更提交
+git commit -m "修改說明"
+
+## 設定主分支名稱
+git branch -M main
+
+## 設定遠端倉庫
+git remote add origin 專案網址
+
+## 查看遠端
+git remote -v
+
+## 推送到 GitLab
+git push -u origin main
+
+## 查看狀態
+git status
+
+## 查看差異
+git diff
+
+## 拉取最新版本
+git pull
+
+## 推送變更
+git push
+
+## 查看分支
+git branch
+
+## 建立分支
+git branch 分支名稱
+
+## 切換分支
+git checkout 分支名稱
+git switch 分支名稱(新寫法)
+
+## 建立並切換分支
+git checkout -b 分支名稱
+
+## 推送新分支
+git push -u origin 分支名稱
+
+## 刪除本地分支
+git branch -d 分支名稱
+
+## 刪除遠端分支
+git push origin --delete 分支名稱
+
+```
